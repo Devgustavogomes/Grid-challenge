@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: 48px 1fr  / 218px 1fr;
+    grid-template-areas: "nav nav"
+                         "sidebar main";
+}
+header {
+    grid-area: nav;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}
+.menu button {
+   background-color: transparent;
+   border: 0;
+   margin-left: 10px;
+}
+.search{
+    display: flex;
+    align-items: center;
+
+}
+.search input{
+    max-height: 36.8px;
+    min-height: 36.8px;
+    width: 348px;
+    margin: 0;
+    border-right: 0;
+    border: 1;
+}
+.search button{
+    width: 57px;
+    height: 40px;
+    margin: 0;
+    float: right;
+    background-color: rgba(248, 248, 248, 1);
+    border-left: 0;
+}
+.sideitens {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sideitens button {
+    border: 0;
+    background-color: transparent;
+}
+.avatar {
+    margin-right: 10px;
+}
+aside{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+aside button {
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    font-size: 14px;
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 30px;
+}
+.video {
+    display: grid;
+    grid-template-rows: 175px 88px;
+    grid-template-columns: 282px;
+    grid-template-areas: "img"
+                         "nome";
+}
+.thumb {
+    grid-area: img;
+    place-self: center;
+}
+.channel {
+    height: 50px;
+    width: 50px;
+    place-self: left;
+    margin-left:4px;
+    border: 0;
+    background-color: transparent;
+    grid-area: nome;
+}
+.title {
+    grid-area: nome;
+    justify-self: center;
+    font-size: 14px;
+    width: 180px;
+    margin-left: 10px;
+}
